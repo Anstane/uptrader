@@ -1,0 +1,9 @@
+<ul>
+  {% for sublist in menu %}
+      <ul style="margin-left: {{ forloop.counter0 }}0px;">
+          {% for item in sublist %}
+              <li><a href="{% url 'menu' path=item.url %}">{{ item.name }}</a></li>
+          {% endfor %}
+      </ul>
+  {% endfor %}
+</ul>
