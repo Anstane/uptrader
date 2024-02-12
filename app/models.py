@@ -1,12 +1,14 @@
 from django.db import models
 
 class MenuItem(models.Model):
+    """Модель объекта меню."""
+
     name = models.CharField(
-        max_length=100,
-        unique=True
+        max_length=100
     )
     url = models.CharField(
         max_length=255,
+        unique=True,
         blank=True
     )
     parent = models.ForeignKey(
